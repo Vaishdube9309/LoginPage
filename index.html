@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In Election बुलढाणा पोलीस E-बंदोबस्त</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f7f7f7;
+      }
+      .container {
+        display: flex;
+        width: 900px;
+        height: 500px;
+        background-image: url("./download.jpg");
+        background-size: cover;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .left-section {
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(129, 13, 13);
+        padding: 20px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+      .left-section .heading {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+      .left-section p span {
+        margin-left: 190px;
+      }
+      .left-section .log_section {
+        position: absolute;
+        top: 2px;
+        right: 1px;
+        width: 100px;
+        height: 80px;
+      }
+      .left-section .log_section img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .right-section {
+        flex: 1;
+        background: rgba(168, 162, 162, 0.5);
+        margin-top: 20px;
+        height: 90%;
+        border-radius: 15px;
+        padding: 10px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .ri .right-section h2 {
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-control {
+        border-radius: 20px;
+        padding: 10px 15px;
+      }
+      .btn-primary {
+        background-color: #6c63ff;
+        border-color: #6c63ff;
+        border-radius: 20px;
+        padding: 10px 20px;
+      }
+      .btn-outline-secondary {
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin-top: 10px;
+      }
+      .text-right {
+        text-align: right;
+      }
+    .heading{
+        color: rgb(238, 237, 249);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="right-section">
+        <h2>Sign In</h2>
+        <form onsubmit="return validateForm()">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password *</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe" />
+            <label class="form-check-label" for="rememberMe">Remember me</label>
+            <a href="#" class="float-right">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Sign In
+          </button>
+        </form>
+      </div>
+      <div class="left-section">
+        <!-- <div class="log_section">
+          <img src="./logoW.png" alt="" />
+        </div> -->
+        <div class="heading">
+          <p>
+            <span class="ve">महिला व  </span> <br />
+            <span> बाल विकास विभाग </span> <br />
+            <!-- <span class="yr">2024</span> -->
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      function validateForm() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        // Simple validation for demonstration purposes
+        if (email === "" || password === "") {
+          alert("Email and password must be filled out");
+          return false;
+        }
+
+        // Check if email and password match predefined values
+        if (email === "test@example.com" && password === "password123") {
+          alert("Login successful!");
+          window.location.href = "buldhana.html"; // Redirect to main.html
+          return false; // Prevent form submission
+        } else {
+          alert("Invalid email or password");
+          return false; // Prevent form submission
+        }
+      }
+    </script>
+
+   <!-- Bootstrap JS and dependencies (optional) -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ </body>
+</html>
